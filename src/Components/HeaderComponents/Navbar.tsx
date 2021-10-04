@@ -5,15 +5,15 @@ import {Link} from "react-scroll";
 
  
 
-export default function Navbar({navlinks}) {
+export default function Navbar() {
     const classes = useStyles();
     
-    // const navlinks = [
-    //   {label: "About", id: "About"},
-    //   {label: "Services" , id: "Services"},
-    //   {label: "Contact",  id: "Contact"},
-    //   {label: "Footer",  id: "Footer"},
-    // ];
+    const navlinks = [
+      {label: "About", id: "About"},
+      {label: "Services" , id: "Services"},
+      {label: "Contact",  id: "Contact"},
+      {label: "Footer",  id: "Footer"},
+    ];
 
 
     return (
@@ -35,7 +35,7 @@ export default function Navbar({navlinks}) {
               <Button key={i} className={classes.navlinks}>{item.label}</Button>)}
            </Box> */}
            <Box>
-          {navlinks.map((item, i) =>(
+          {navlinks.map((item:any, i:any) =>(
             <Button key={i} className={classes.navlinks}
              activeClass="active"
              to={`${item.id}`}

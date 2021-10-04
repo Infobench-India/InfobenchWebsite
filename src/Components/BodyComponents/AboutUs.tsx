@@ -17,6 +17,7 @@ return (
      <Grid item xs={10} sm={6}>
      {RenderSectionHeading({
      heading:"About Us" ,
+     alignCenter: "Center",
      description:"Infobench founded by technology professionals with a vision to provide high quality and cost effective solutions having deep domain knowledge in the fields of industrial automation, plant data reporting & analytics."})}
      <br/>
      </Grid>

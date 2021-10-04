@@ -5,9 +5,6 @@ import {RenderInputText} from '../common/formComponent';
 // import { RenderInputText } from '../common/commonComponent';
 
 
-
-
-
 export default function Contact() {
  const classes = useStyles();
  const [state, setState] = useState({
@@ -16,16 +13,15 @@ export default function Contact() {
      email: "",
      messages: "",
      },
-    
  });
 
- const handleOnChange = ({target}) => {
-     const {data, } = state;
-     data[target.name] = target.value
+ const handleOnChange = () => {
+      const {data } = state
+    //  data[target.name] = target.value
      setState({data})
     
  };
-const handleSubmit = (e) => {
+const handleSubmit = (e: { preventDefault: () => void; }) => {
   e.preventDefault()
   console.log("submitted", state.data);
  }
@@ -51,15 +47,18 @@ return (
                name:"firstname",
                state: state,
                onChange: handleOnChange,
-
+               multiline: false,
+               rows: "2",
                })}
           </Grid>
           <Grid item xs={12} sm={10} style={{marginBottom: "16px"}}>
           {RenderInputText({
               label: "E-mail",
-               name:"email",
-               state: state,
-               onChange: handleOnChange,
+              name:"email",
+              state: state,
+              onChange: handleOnChange,
+              multiline: false,
+              rows: "2",
                })}
           </Grid>
           <Grid item xs={12} sm={10} style={{marginBottom: "16px"}}>

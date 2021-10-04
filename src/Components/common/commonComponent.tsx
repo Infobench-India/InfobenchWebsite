@@ -14,10 +14,10 @@ export const Divider =() => {
     
 }
 
-export const RenderSectionHeading = ({heading , alignCenter, description}) => {
+export const RenderSectionHeading = ({heading, alignCenter, description}:any) => {
    const classes = BodyStyles();
    return <Box className={classes.sectionHeadingCont}>
-   { Decorator({ withIcon:false, styles: alignCenter ? {width:"100px" , margin: "10px auto" } :{}})}
+   { Decorator()}
     <Typography 
     variant="h4" 
     align={alignCenter ? "center" : "left"} 
@@ -36,7 +36,7 @@ export const RenderSectionHeading = ({heading , alignCenter, description}) => {
   
 };
 
-export const CardMedia =(label, Icon) => {
+export const CardMedia =(label: any, Icon: any) => {
    
   return <Grid container>
         <Grid item xs={4}>
@@ -44,7 +44,7 @@ export const CardMedia =(label, Icon) => {
         </Grid>
         <Grid item xs={8}>
             <Typography  variant="body1"  component="h6" gutterBottom>label</Typography>
-         
+          
         </Grid>
     </Grid>
     
