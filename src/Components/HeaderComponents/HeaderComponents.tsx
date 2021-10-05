@@ -1,5 +1,5 @@
 import React from 'react'
-import {Box, Typography } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
 import { useStyles } from './HeaderStyles';
 import Navbar from './Navbar';
 //  import DrawerComponent from '..HeaderComponents/DrawerComponent';
@@ -7,31 +7,31 @@ import Navbar from './Navbar';
 //  import {Link} from "react-scroll";
 
 export default function HeaderComponents() {
-    const classes = useStyles();
-    // const [initialState, setInitialState]= useState(false);
-    
-    //  const  handleDrawerToggler = () => {
-    //     setInitialState(!initialState);
-    //  }
-   
+  const classes = useStyles();
+  // const [initialState, setInitialState]= useState(false);
 
-    // const navlinks = [
-    //   {label: "About", id: "About"},
-    //   {label: "Services" , id: "Services"},
-    //   {label: "Contact",  id: "Contact"},
-    //   {label: "Footer",  id: "Footer"},
-    // ];
+  //  const  handleDrawerToggler = () => {
+  //     setInitialState(!initialState);
+  //  }
 
-    return (
-        <Box className={classes.HeaderWrapper }>
-        <Navbar />
-         {/* navlinks={navlinks} handleDrawerToggler={handleDrawerToggler}  */}
-          {/* <DrawerComponent initialState={initialState} navlinks={navlinks} handleDrawerToggler={handleDrawerToggler} />   */}
-        <Box className={classes.Headercontainer}>
-        <Typography variant="h2" component="h3"  className={classes.headerTitle}>
+
+  // const navlinks = [
+  //   {label: "About", id: "About"},
+  //   {label: "Services" , id: "Services"},
+  //   {label: "Contact",  id: "Contact"},
+  //   {label: "Footer",  id: "Footer"},
+  // ];
+
+  return (
+    <Box className={classes.HeaderWrapper}>
+      <Navbar />
+      {/* navlinks={navlinks} handleDrawerToggler={handleDrawerToggler}  */}
+      {/* <DrawerComponent initialState={initialState} navlinks={navlinks} handleDrawerToggler={handleDrawerToggler} />   */}
+      <Box className={classes.Headercontainer}>
+        <Typography variant="h2" component="h3" className={classes.headerTitle}>
           Infobench Solutions
         </Typography>
-           {/* <Box>
+        {/* <Box>
           {navlinks.map((item, i) =>(
             <Button key={i} className={classes.navlinks}
              activeClass="active"
@@ -48,17 +48,17 @@ export default function HeaderComponents() {
           ) 
           )}
         </Box>    */}
-        <Typography variant="h4" component="h5"  className={classes.headerDesc}>
-        Industrial Automation and Software Solution Provider
+        <Typography variant="h4" component="h5" className={classes.headerDesc}>
+          Industrial Automation and Software Solution Provider
         </Typography>
         <Box className={classes.decorator}>
-         <Typography  variant="h4" className={classes.decoratorText}>
+          <Typography variant="h4" className={classes.decoratorText}>
             | About Us |
-       </Typography>
-     
-   </Box>
- </Box>
- </Box>
-    
- );
+          </Typography>
+
+        </Box>
+      </Box>
+    </Box>
+
+  );
 };
