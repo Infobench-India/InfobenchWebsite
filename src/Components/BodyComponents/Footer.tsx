@@ -75,11 +75,9 @@ export default function Footer() {
                 align="center"
                 color="inherit"
             >
-                <Typography variant='h6'> This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</Typography>
+                <Typography > Copyright © 2020 Infobench Solutions LLP - All Rights Reserved.</Typography>
 
-                <Typography variant='h6'>  We look forward to a wonderful relationship together and success for all concerned.</Typography>
-
-                <Typography variant='h6'>  Pune, Maharashtra, India   </Typography>
+            
             </Typography>
         </Box>
 

@@ -12,6 +12,7 @@ export default function Navbar() {
     { label: "About", id: "About" },
     { label: "Services", id: "Services" },
     { label: "Contact", id: "Contact" },
+    { label: "Customer", id: "Customer" },
     { label: "Footer", id: "Footer" },
   ];
 
@@ -29,11 +30,7 @@ export default function Navbar() {
         <Typography variant="h5" component="h6" >
           Infobench Solutions
         </Typography>
-        {/* <Box>
-         
-             {navlinks.map((item, i)=>
-              <Button key={i} className={classes.navlinks}>{item.label}</Button>)}
-           </Box> */}
+      
         <Box>
           {navlinks.map((item: any, i: any) => (
             <Button key={i} className={classes.navlinks}

@@ -1,10 +1,9 @@
 import { Box, Container, Grid, Typography } from '@material-ui/core'
-import React from 'react'
+import React  from 'react'
 import { useStyles } from './BodyStyles'
 
 export default function Post() {
     const classes = useStyles();
-
     return (
         <Box className={classes.sectionDark} id="Services">
             <Grid container style=
@@ -13,7 +12,7 @@ export default function Post() {
                     justifyContent: "center",
                     alignContent: "center",
                 }}>
-                <Grid item xs={12} sm={2}>
+                <Grid item xs={10} sm={2} style={{ marginBottom: "40px" }}>
                     <Typography variant="h3"  >
                         Services
                     </Typography>
@@ -22,7 +21,7 @@ export default function Post() {
             <Container maxWidth="xl">
                 <Grid container spacing={2}>
                     <Grid item xs={2} sm={4} lg={6}>
-                        <Box className={classes.imageContainer}>
+                        <Box className={classes.imageContainer }>
                             <img src={"https://img1.wsimg.com/isteam/stock/10539/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300"}
                                 alt="" className={classes.media}
                                 title="Internet of Things" />
@@ -32,7 +31,6 @@ export default function Post() {
                                 increase efficiencies and reduce costs you need to integrate all of your automation operations
                                 to achieve the connected enterprise.. </Typography>
                         </Box>
-
                     </Grid>
                     <Grid item xs={2} sm={4} lg={6}>
                         <Box className={classes.imageContainer}>

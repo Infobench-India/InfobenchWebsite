@@ -3,9 +3,13 @@ import { Theme } from '../Theme';
 export const useStyles = makeStyles((theme) => ({
     HeaderWrapper: {
         width: "100%",
-        height: "90vh",
-        backgroundColor: Theme.colors.base1,
-
+        minHeight: "150vh",
+        height: "auto",
+        // backgroundColor: Theme.colors.base1,
+        background: `linear-gradient(to bottom right,#04303140, #6473),
+        url(${"https://img1.wsimg.com/isteam/stock/6QeVEP4/:/rs=w:768"})`,
+         backgroundSize:"cover",
+        backgroundRepeat:"no-repeat",
     },
     Headercontainer: {
         width: "100%",
@@ -21,7 +25,8 @@ export const useStyles = makeStyles((theme) => ({
 
     },
     headerTitle: {
-        fontSize: "3rem",
+        fontSize: "6rem",
+        fontColor: "Blue",
         margin: theme.spacing(1, 0),
         [theme.breakpoints.down('xs')]: {
             fontSize: "1.3rem",

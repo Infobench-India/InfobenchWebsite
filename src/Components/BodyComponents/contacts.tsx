@@ -2,22 +2,21 @@ import React, { useState } from 'react'
 import { Box, Grid, Container, Typography, Button } from '@material-ui/core'
 import { useStyles } from './BodyStyles'
 import { RenderInputText } from '../common/formComponent';
-// import { RenderInputText } from '../common/commonComponent';
 
 
 export default function Contact() {
     const classes = useStyles();
     const [state, setState] = useState({
-       data: {
+        data: {
             firstname: String,
             email: String,
             messages: String,
         },
     });
 
-    const handleOnChange = ({ target }: any) =>  {
+    const handleOnChange = ({ target }: any) => {
         var { data } = state
-       data=[target.name] = target.value;
+        data = [target.name] = target.value;
         setState({ data })
 
     };
@@ -38,10 +37,10 @@ export default function Contact() {
                         <form onSubmit={handleSubmit}>
                             <Grid container
                                 direction="row"
-                                 justify="center"
+                                justify="center"
                                 alignItems="center"
                             >
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                <Grid item xs={12} sm={12} style={{ marginBottom: "16px" }}>
                                     {RenderInputText({
                                         label: "First Name",
                                         name: "firstname",
@@ -51,7 +50,7 @@ export default function Contact() {
                                         rows: "2",
                                     })}
                                 </Grid>
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                <Grid item xs={12} sm={12} style={{ marginBottom: "16px" }}>
                                     {RenderInputText({
                                         label: "E-mail",
                                         name: "email",
@@ -61,7 +60,7 @@ export default function Contact() {
                                         rows: "2",
                                     })}
                                 </Grid>
-                                <Grid item xs={12} sm={10} style={{ marginBottom: "16px" }}>
+                                <Grid item xs={12} sm={12} style={{ marginBottom: "16px" }}>
                                     {RenderInputText({
                                         label: "Messages",
                                         name: "messages",
@@ -75,6 +74,13 @@ export default function Contact() {
                                     <Button variant="outlined" type="submit" fullWidth={true} className={classes.submitBtn}>
                                         Submit
                                     </Button>
+                                </Grid>
+                                <Grid item xs={10} sm={12} style={{ marginBottom: "16px" }}>
+                                <Typography className={classes.font}> This site is protected by reCAPTCHA and Google Privacy Policy and Terms of Service apply.</Typography>
+
+                                <Typography className={classes.font1}>  We look forward to a wonderful relationship together and success for all concerned.</Typography>
+
+                                <Typography className={classes.font2}>  Pune, Maharashtra, India   </Typography>
                                 </Grid>
                             </Grid>
                         </form>

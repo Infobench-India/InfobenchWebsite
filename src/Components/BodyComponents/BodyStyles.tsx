@@ -11,16 +11,16 @@ export const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(5),
 
     },
+    sectionWhite: {
+        backgroundColor: Theme.colors.base2,
+        padding: theme.spacing(8),
+
+    },
     divider: {
         width: "65px",
         height: "4px",
         backgroundColor: Theme.colors.base2,
         margin: theme.spacing(2, 0),
-    },
-
-    media: {
-        width: "100%",
-        height: "auto",
     },
     sectionHeadingCont: {
         Top: 100,
@@ -38,14 +38,20 @@ export const useStyles = makeStyles((theme) => ({
         marginBottom: "16px",
     },
     button: {
-
         marginLeft: 225,
-
     },
     imageContainer: {
-
+        position: "relative",
+        overflow: "hidden",
+        "&:hover": {
+            backgroundColor: 'rgb(0, 0, 0)',
+        },
+        
     },
-
+    media: {
+        width: "100%",
+        height: "auto",
+    },
     footerContainer: {
         backgroundColor: "Black",
         color: Theme.colors.base2,
@@ -116,5 +122,33 @@ export const useStyles = makeStyles((theme) => ({
     sectionDesc: {
 
     },
+    font: {
+        fontSize: "1rem",
+        fontWeight: "bolder",
+        fontFamily: "Roboto",
+        position: "relative",
+        color: Theme.colors.base2,
+        margin: theme.spacing(2, 0),
+    },
+    font1: {
+        fontSize: "1rem",
+        fontWeight: "bolder",
+        position: "relative",
+        color: Theme.colors.base2,
+        margin: theme.spacing(2, 0),
+    },
+    font2: {
+        fontSize: "1rem",
+        fontWeight: "bolder",
+        fontFamily: "Roboto",
+        position: "relative",
+        color: Theme.colors.base2,
+        margin: theme.spacing(2, 30),
+    },
 
+    media1: {
+        marginBottom: theme.spacing(1),
+        width: "70%",
+        height: "70",
+    },
 }));
